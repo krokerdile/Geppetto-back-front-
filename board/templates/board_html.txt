@@ -1,0 +1,39 @@
+{% if user.is_authenticated %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>제페토</title>
+</head>
+<body>
+    <a href="{% url 'main' %}"><p>제페토</p></a>
+    <h2>게시판입니다.</h2>
+    <br>
+    <table class="table">
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">ID</th>
+                <th scope="col">Date</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+            {% for board in boards.all %}  
+                <tr>
+                    <th scope="row">{{board.id}}</th>
+                    <td><a href="{%url 'detail3' board.id%}">{{board.title}}</a></td>
+                    <td>{{board.writer}}</td>
+                    <td>{{board.pub_date}}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+    </table>
+    <a href="{% url 'new3' %}"><button type="button" class="btn btn-danger">글쓰기</button>
+</body>
+</html>
+{% endif %}

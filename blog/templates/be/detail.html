@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>제페토</title>
+</head>
+<body>
+    <div class="container">
+            <h1> {{blog.title}} </h1>
+            <p> {{blog.pub_date}} </p>
+            <p> 이름 : {{blog.name}} </p>
+            <br>
+            <p> 나이 : {{blog.age}} </p>
+            <br>
+            <p> 전화번호 : {{blog.phone}} </p>
+            <br>
+            <p> 경력사항 : {{blog.body}} </p>
+            <br><br>
+    
+            <a href="{%url 'be_geppetto'%}">글 목록</a>
+            <a href="{%url 'edit' blog.id %}">수정</a>
+            <a href="{%url 'delete' blog.id %}">삭제</a>
+    </div>
+</body>
+</html>

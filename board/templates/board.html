@@ -1,0 +1,80 @@
+{% if user.is_authenticated %}
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/boardstyle.css' %}">
+    <!--background head-->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!--부트스트랩 테이블-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="out">
+                <!-- <img src="./캡처2222222222222222222222222222222222222222222.PNG" alt="logo" class="logo"> -->
+                <a href="{% url 'main' %}"><p id="main">제페토.</p></a>
+                <div class="search__container">
+                    <input class="search__input" type="text" placeholder="Search">
+                </div>
+                <nav id="nav">
+                    <ul class="nav_links">
+                        <li><a href="#" id="intro">소개</a></li>
+                        <li><a href="#" id="pick">수거</a></li>
+                        <li><a href="#" id="market">장터</a></li>
+                        <li><a href="#" id="board">게시판</a></li>
+                    </ul>
+                    <ul class="nav_info">
+                        <li><a href="#" id="login">로그인</a></li>
+                        <li><a href="#" id="join">회원가입</a></li>
+                    </ul>
+                </nav>
+                <div class="subbar"></div>
+            </div>
+        </header>
+        <div class="box1"></div>
+        <div class="under">
+            <div class="boardbody">
+                <table class="tb table-hover">
+                    <div class="boardtitle">
+                            <p># 자유게시판</p>
+                        </div>
+                    <thead> 
+                        <tr>
+                            <th class="tablenav1" scope="col">번호</th> 
+                            <th class="tablenav2" scope="col">제목</th> 
+                            <th class="tablenav3" scope="col">아이디</th> 
+                            <th class="tablenav4" scope="col">날짜</th>
+                        </tr> 
+                    </thead>
+                
+                    <tbody>    
+                        {% for board in boards.all %}  
+                        <tr> 
+                            <th scope="row" class="tableb tableb1">{{board.id}}</th> 
+                            <td class="tableb tableb2"><a href="{%url 'detail3' board.id%}">{{board.title}}</a></td> 
+                            <td class="tableb tableb3">{{board.writer}}</td> 
+                            <td class="tableb tableb4">{{board.pub_date}}</td> 
+                        </tr> 
+                        {% endfor %}
+                    </tbody> 
+                </table> 
+                <div class=tablefoot>
+                    <button class="butt butt--swap">글쓰기<span>글쓰기</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+{% endif %}

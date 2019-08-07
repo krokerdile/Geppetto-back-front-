@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <a href="{% url 'main'%}"><p>home</p></a> 
+    <!-- Intro페이지로 돌아오기 -->
+    {% if user.is_active %}
+    <!-- 로그인 상태 -->
+    <a href="{% url 'logout'%}"><p>logout</p></a>
+    <p>{{user.username}}</p>
+    <a href=""><p>mypage</p></a>
+    <!-- 로그아웃 하기 -->
+    {% else %}
+    <!-- 로그아웃 상태 -->
+    <a href="{% url 'login'%}"><p>login</p></a>
+    <!-- 로그인페이지로 이동 -->
+    <a href="{% url 'signup'%}"><p>signup</p></a>
+    <!-- 회원가입 페이지로 이동 -->
+    {% endif %}
+    <a href=""><p>장터</p></a> 
+    <a href="{% url 'disposal' %}"><p>수거</p></a>
+    <a href="{% url 'be_geppetto' %}"><p>일자리 신청</p></a>
+    <a href="{% url 'board' %}"><p>게시판</p></a>
+</body>
+</html>

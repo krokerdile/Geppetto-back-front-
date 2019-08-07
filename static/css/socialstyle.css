@@ -1,0 +1,46 @@
+
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+body {
+    font-family: 'Lato', sans-serif;
+    color: #FFF;
+    -webkit-font-smoothing: antialiased;
+}
+
+p > a:hover{
+    color: #d9d9d9;
+    text-decoration:  underline;
+}
+
+body {
+    background-color: white;
+}
+.networks {
+    width:90%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.netbox {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1.1px solid #81674C;
+    padding-top:5px;
+    color: #444;
+    font-size:40px;
+}
+
+.netbox:after {
+    position: absolute;
+    top: -1.7rem;
+    right: 0;
+    content: 'Log in on my networks!';
+    color:#444;
+    font-size: 1rem;
+    padding-left: 10px;
+    background-color:white;
+}
+

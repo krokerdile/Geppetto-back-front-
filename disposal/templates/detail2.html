@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>제페토</title>
+</head>
+<body>
+    <div class="container">
+            <h1> {{disposal.title}} </h1>
+            <p> {{disposal.pub_date}} </p>
+            <p> 작성자 : {{disposal.writer}} </p>
+            <br>
+            <p> 이름 : {{disposal.name}} </p>
+            <br>
+            <p> 수거 물품 : {{disposal.item}} </p>
+            <br>
+            <p> 주소 : {{disposal.address}} </p>
+            <br>
+            <p> 전화번호 : {{disposal.phone}} </p>
+            <br>
+            <p> 사진 : </p>
+            {% if disposal.photo %}
+            <img src="{{ disposal.photo.url }}" class="card-img-top" alt="..." width="200" height="150">
+            {% endif %}
+            <br>
+            <p> 기타 사항 : {{disposal.etc}} </p>
+            <br><br>
+    
+            <a href="{%url 'disposal'%}">글 목록</a>
+            <a href="{%url 'edit2' disposal.id %}">수정</a>
+            <a href="{%url 'delete2' disposal.id %}">삭제</a>
+    </div>
+</body>
+</html>

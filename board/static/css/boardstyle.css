@@ -1,0 +1,292 @@
+@font-face { font-family: 'KOMACON'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/KOMACON.woff') format('woff'); font-weight: normal; font-style: normal; }
+* {
+    box-sizing: border-box;
+    margin: 0 0;
+    padding: 0;
+}
+
+html {
+    font-size: 20px;
+}
+body {
+    font-size: 1rme;
+}
+
+.container{
+    margin: 0 0;
+    background-color: white;
+    height: 100%;
+    justify-content: stretch;
+    padding:0 0;
+    width:100%;
+    display:flex;
+}
+
+.under {
+    height: 100%;
+    width: 100%;
+    margin: 0 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background: white;
+}
+
+/* header 시작 */
+
+header {
+    position: fixed;
+    width: 100%;
+    /* background-color: rgba(255, 255, 240, 0); */
+    z-index: 9999;
+}
+
+header .out {
+    width: 54.5rem;
+    margin: 0 0;
+}
+
+#main {
+    font-family: 'Nanum Gothic Coding', monospace;
+    /* color: rgb(250, 250, 250); */
+    color: black;
+    font-size: 1.9rem;
+    float: left;
+    padding: 1.1rem 0 1.2rem;
+}
+
+/* 검색창 시작 */
+
+.search__container {
+    position: relative;
+    width: 250px;
+    float: right;
+    top: 1.5rem;
+    z-index:9998;
+}
+
+.search__input {
+    width: 100%;
+    padding: 0.2rem 0.75rem;
+    background-color: transparent;
+    transition: transform 250ms ease-in-out;
+    font-size: 0.6rem;
+    line-height: 0.9rem;
+    color: #575756;
+    /* color: rgb(250, 250, 250); */
+    background-color: transparent;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-position: 95% center;
+    border-radius: 2.5rem;
+    border: 1px solid #575756;
+    /* border-bottom: 1px solid #575756; */
+    transition: all 250ms ease-in-out;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+.search__input::placeholder {
+    color: rgba(87, 87, 86, 0.8);
+    /* color: rgb(250, 250, 250); */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.search__input:hover, .search__input:focus {
+    outline: 0;
+    width: 12rem;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #575756;
+    /* color: rgb(250, 250, 250); */
+    border-radius: 0;
+    background-position: 100% center;
+}
+
+/* 검색창 끝 */
+
+#nav {
+    position: relative;
+}
+
+#nav li, a {
+    /* color: rgb(250, 250, 250); */
+    color: black;
+    text-decoration: none;
+}
+
+.nav_links {
+    font-family: 'Nanum Gothic Coding', monospace;
+    list-style: none;
+    padding: 1.2rem 0 0 0;
+    position: relative;
+    left: 6rem;
+}
+
+.nav_links li {
+    display: inline-block;
+}
+
+.nav_links li a{
+    padding: 0.75rem 1.4rem 0;
+    height: 2.6rem;
+    display: block;
+    line-height: 100%;
+    font-size: 0.7rem;
+    color: #333;
+}
+
+.nav_info {
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-size: 0.7rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 0;
+    list-style: none;
+}
+
+.nav_info li {
+    display: inline-block;
+    /* float: right; */
+    position: relative;
+}
+
+.nav_info li a{
+    padding: 0 0.75rem;
+    display: block;
+    line-height: 100%;
+    font-size: 0.7rem;
+    color: #333;
+}
+
+
+/* header 끝 */
+
+/* subbar 시작 */
+
+.subbar {
+    position: fixed;
+    height: 30px;
+    width: 100%;
+    top: 85px;
+    background-color: transparent;
+}
+
+/* subbar 끝 */
+
+/* box1 시작 */
+
+.box1 {
+    background-color: rgb(237, 226, 218);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 30%;
+    height: 100%;
+}
+
+/* box1 끝 */
+
+/* 게시판 이름 */
+.boardtitle{
+    padding-left:7px;
+    font-family: 'KOMACON';
+    font-size:25px;
+    color: #81674C;
+}
+
+/* 게시판 table*/
+.boardbody{
+    margin-top:8em;
+    margin-left:18em;
+    min-width: 300px;
+    font-family: 'KOMACON';
+    font-size:17px;
+}
+/*thead*/
+.tablenav{
+    border:1.2px solid #575756;
+}
+.tablenav1{
+    height:35px;
+    width:100px;
+    text-align:center;
+    padding: 0 0;
+}
+.tablenav2{
+    width:400px;
+    text-align:center;
+    padding: 0 0;
+}
+.tablenav3, .tablenav4{
+    width:180px;
+    text-align:center;
+    padding: 0 0;
+}
+thead{
+    padding-bottom:10px;
+    border-bottom:2px solid #81674C;
+}
+tr{
+    height:30px;
+}
+
+/*table body*/
+.tableb1, .tableb3, .tableb4{
+    text-align:center;
+}
+.tableb{
+    padding:5px 5px;
+    font-size:18px;
+}
+
+/*글쓰기 버튼*/
+.tablefoot{
+    margin-top:50%;
+    border-top:2px solid orange;
+}
+.butt {
+    padding:2.5px 15px;
+    margin-top:10px;
+    margin-left:46.7%;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    border: 1.2px solid orange;
+    border-radius: 2px;
+    outline: none;
+    color: black;
+    background-color: white;
+    white-space: nowrap;
+}
+.butt--swap span {
+    padding:2.5px 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    opacity: 0;
+    color: white;
+    transition: 0.35s ease;
+}
+.butt--swap::before {
+    content: "";
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background-color: orange;
+    transition: 0.5s ease;
+}
+.butt--swap:hover:before {
+    width: 100%;
+}
+.butt--swap:hover span {
+    opacity: 1;
+}

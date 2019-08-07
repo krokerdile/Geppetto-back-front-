@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="C:\Users\tkekd\OneDrive\바탕 화면\전국해커톤\js\jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="C:\Users\tkekd\OneDrive\바탕 화면\전국해커톤\js\jquery.easing.1.3.min.js"></script>
+    <script type="text/javascript" src="C:\Users\tkekd\OneDrive\바탕 화면\전국해커톤\js\scroll_menu.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel|Libre+Baskerville&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="{% static 'css/socialstyle.css' %} ">
+    <link rel="stylesheet" href="{% static 'css/home.css' %} ">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="out">
+                <!-- <img src="./캡처2222222222222222222222222222222222222222222.PNG" alt="logo" class="logo"> -->
+                <p id="main">GEPPETTO</p>
+                <!-- <div class="search__container">
+                    <input class="search__input" type="text" placeholder="Search">
+                </div> -->
+                <nav id="nav">
+                    <ul class="nav_links">
+                        <li><a href="{% url 'main' %}" id="intro">소개</a></li>
+                        <li><a href="#" id="market">장터</a></li>
+                        <li><a href="{% url 'board' %}" id="board">게시판</a></li>
+                        <li><a href="{% url 'be_geppetto' %}" id="edu">교육 신청</a></li>
+                    </ul>
+                    <ul class="nav_info">
+                        {% if user.is_active %}
+                        <a href="{% url 'logout'%}"><p>logout</p></a>
+                        <p>{{user.username}}</p>
+                        <a href=""><p>mypage</p></a>
+                        <!-- 로그아웃 하기 -->
+                        {% else %}
+                        <li><a href="{% url 'login'%}" id="login">로그인</a></li>
+                        <li><a href="{% url 'signup'%}" id="join">회원가입</a></li>
+                        {% endif %}
+                    </ul>
+                </nav>
+                <!-- <div class="subbar"></div> -->
+            </div>
+            <div>
+                <label for="menuicon" class="menu">
+                    <i class="xi-truck xi-2x"></i>
+                    <p id="pickup">수거요청</p>
+                </label>
+            </div>
+        </header>
+        <div class="content">
+            <!-- <div class="box1"></div> -->
+            <input type="checkbox" id="menuicon">
+            <!-- <label for="menuicon" id=menubtn>수거<br>요청</label> -->
+            <label for="menuicon" class="background"></label>
+            <div class="sidebar">
+                <div class="sidebar_content">
+                    <label for="menuicon"><i class="xi-close-thin xi-2x" id="exiticon"></i></label>
+                    <div class="under">
+                            <p class="subtitle"># 판매하기</p>
+                            <br>
+                            <br>
+                            <div class="row">
+                
+                                <div id="blog-form" class="col-md-4">
+                                    <form id="contentForm">
+                                        <div class="form-group">
+                                            <label for="title">글 제목</label>
+                                            <input name="title" type="text" class="form-control form-control-lg" id="title" style="width:340px;height:20px" aria-describedby="" required />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="selection"> 품목 </label>
+                                            <select class="form-control form-control-lg" style="width:340px;height:25px">
+                                                <option>의자</option>
+                                                <option>선풍기</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                                <label for="price">판매가격</label>
+                                                <input name="price" type="text" class="form-control form-control-lg" id="title" style="width:340px;height:20px" aria-describedby="" required/>
+                                        </div>
+                                        
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="exampleFormControlFile1">물품 사진</label>
+                                                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                            </div>
+                                        </form>
+                                        
+                
+                                        <div class="form-group">
+                                            <label for="">특이사항</label>
+                                            <br>
+                                            <textarea name="body" id="body" class="form-control form-control-lg" rows="3" cols="50" contenteditable="true"></textarea>
+                                        </div>
+                                        <nav id="saleButton">
+                                            <li>
+                                            판매하기
+                                            <span></span><span></span><span></span><span></span>
+                                            </li>
+                                        </nav>
+                                    </form>
+                                    <div class=warning>
+                                        <br>
+                                        <small>* 사진은 실제와 최대한 유사한 사진으로 올려주세요.</small>
+                                        <br>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <label for="sidebar" class="background"></label>
+            <div class="wrap">
+                <div id="top_menu">
+                    <ul>
+                        <li class="on"><a href="#what" id="info1">01 '제페토'란</a></li>
+                        <li><a href="#do" id="info2">02 '제페토'가 하는 일은?</a></li>
+                        <li><a href="#value" id="info3">03 '제페토'가 추구하는 가치는?</a></li>
+                    </ul>
+                </div>
+                <div id="contents">
+                    <div id="what"><img src="{% static 'image/dowhat.jpg' %}" alt="what" id="whatimage"  /></div>
+                    <div id="do"><img src="{% static 'image/whatis.jpg' %}" alt="do" id="doimage" /></div>
+                    <div id="value"><img src="{% static 'image/value.jpg' %}" alt="value" id="valueimage" /></div>
+                </div>
+            </div>
+            <!-- <div class="bg"></div> -->
+        </div>
+    </div>
+</body>
+
+</html>

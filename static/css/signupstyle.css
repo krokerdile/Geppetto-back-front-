@@ -1,0 +1,373 @@
+@font-face { font-family: 'Arita-buri-SemiBold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-buri-SemiBold.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'Daehan'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Daehan.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'SunBatang-Light'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/SunBatang-Light.woff') format('woff'); font-weight: normal; font-style: normal; }
+body {
+    background-color: #cfd8dc;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.main {
+    width: 500px;
+    height: 500px;
+    margin: 4em auto;
+    border-radius: 20px;
+    padding-top: 18.344px;
+    padding-bottom: 3%;
+    margin-top: 3%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/*signup form*/
+.su {
+    color: #81674C;
+    margin-left:10%;
+    margin-right:2%;
+    margin-bottom: 7%;
+    font-weight: 600;
+    font-size: 25px;
+    font-family: 'Arita-buri-SemiBold';
+}
+
+.signuptitle{
+    display:flex;
+}
+
+.first {
+    width: 80%;
+    color: rgb(38, 50, 56);
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: rgba(136, 126, 126, 0.04);
+    padding: 10px 18px;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+    border: 1.3px solid rgba(0, 0, 0, 0.02);
+    text-align: center;
+    margin-bottom: 23px;
+    font-family: 'SunBatang-Light';
+}
+
+.mail {
+    width: 80%;
+    color: rgb(38, 50, 56);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: rgba(136, 126, 126, 0.04);
+    padding: 10px 18px;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+    border: 1.3px solid rgba(0, 0, 0, 0.02);
+    text-align: center;
+    margin-bottom: 23px;
+    font-family: 'SunBatang-Light';
+}
+
+.pass1 {
+    width: 80%;
+    color: rgb(38, 50, 56);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: rgba(136, 126, 126, 0.04);
+    padding: 10px 18px;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+    border: 1.3px solid rgba(0, 0, 0, 0.02);
+    text-align: center;
+    margin-bottom: 23px;
+    font-family: 'SunBatang-Light';
+}
+
+.pass2 {
+    width: 80%;
+    color: rgb(38, 50, 56);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: rgba(136, 126, 126, 0.04);
+    padding: 10px 18px;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+    border: 1.3px solid rgba(0, 0, 0, 0.02);
+    text-align: center;
+    margin-bottom: 23px;
+    font-family: 'SunBatang-Light';
+}
+
+.add {
+    width: 80%;
+    color: rgba(38, 50, 56, 0.58);
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: rgba(136, 126, 126, 0.04);
+    padding: 10px 18px;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+    border: 1.3px solid rgba(0, 0, 0, 0.02);
+    text-align: center;
+    margin-bottom: 23px;
+    font-family: 'SunBatang-Light';
+}
+
+.tel {
+    width: 80%;
+    color: rgb(38, 50, 56);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: rgba(136, 126, 126, 0.04);
+    padding: 10px 18px;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+    border: 1.3px solid rgba(0, 0, 0, 0.02);
+    text-align: center;
+    margin-bottom: 23px;
+    font-family: 'SunBatang-Light';
+}
+
+.submit {
+    width:400px;
+    height:42px;
+    border-radius: 0.5em;
+    color: #fff;
+    background: rgba(92, 74, 54, 0.877);
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-left:10px;
+    margin-right:10px;
+    margin-top:12px;
+    font-family: 'Daehan';
+    font-size: 14px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+.first:focus,
+.mail:focus,
+.pass1:focus,
+.pass2:focus,
+.add:focus,
+.tel.focus{
+    border: 1.3px solid #81674C;
+    outline: 0;
+}
+
+.submit:hover {
+    box-shadow: 0 0 5px 1px rgb(156, 128, 102);
+    cursor: pointer;
+}
+
+.submit:active {
+    box-shadow: none;
+}
+
+textarea:focus,
+input:focus {
+    color: rgb(165, 135, 107);
+}
+
+a {
+    color: #81674C;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.mb {
+    color: #263238;
+}
+
+span.mb-2:hover {
+    color: #263238;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 20px;
+}
+body {
+    font-size: 1rme;
+}
+
+.container {
+    flex-direction: column;
+    background-color: ivory;
+    height: 100vh;
+    width: 100%;
+}
+
+/* header 시작 */
+
+header {
+    position: fixed;
+    width: 100%;
+    /* background-color: rgba(255, 255, 240, 0); */
+    z-index: 9999;
+}
+
+header .out {
+    width: 54.5rem;
+    margin: 0 auto;
+}
+
+/* .logo {
+    cursor: pointer;
+    height: 60px;
+} */
+
+#main {
+    font-family: 'Nanum Gothic Coding', monospace;
+    /* color: rgb(250, 250, 250); */
+    color: black;
+    font-size: 1.9rem;
+    float: left;
+    padding: 1.1rem 0 1.2rem;
+}
+
+/* 검색창 시작 */
+
+.search__container {
+    position: relative;
+    width: 250px;
+    float: right;
+    top: 1.5rem;
+    z-index:9998;
+}
+
+.search__input {
+    width: 100%;
+    padding: 0.2rem 0.75rem;
+    background-color: transparent;
+    transition: transform 250ms ease-in-out;
+    font-size: 0.6rem;
+    line-height: 0.9rem;
+    color: #575756;
+    /* color: rgb(250, 250, 250); */
+    background-color: transparent;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-position: 95% center;
+    border-radius: 2.5rem;
+    border: 1px solid #575756;
+    /* border-bottom: 1px solid #575756; */
+    transition: all 250ms ease-in-out;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+.search__input::placeholder {
+    color: rgba(87, 87, 86, 0.8);
+    /* color: rgb(250, 250, 250); */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.search__input:hover, .search__input:focus {
+    outline: 0;
+    width: 12rem;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #575756;
+    /* color: rgb(250, 250, 250); */
+    border-radius: 0;
+    background-position: 100% center;
+}
+
+/* 검색창 끝 */
+
+#nav {
+    position: relative;
+}
+
+#nav li, a {
+    /* color: rgb(250, 250, 250); */
+    color: black;
+    text-decoration: none;
+}
+
+.nav_links {
+    font-family: 'Nanum Gothic Coding', monospace;
+    list-style: none;
+    padding: 1.2rem 0 0 0;
+    position: relative;
+    left: 6rem;
+}
+
+.nav_links li {
+    display: inline-block;
+}
+
+.nav_links li a{
+    padding: 0.75rem 1.4rem 0;
+    height: 2.6rem;
+    display: block;
+    line-height: 100%;
+    font-size: 0.7rem;
+    color: #333;
+}
+
+.nav_info {
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-size: 0.7rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 0;
+    list-style: none;
+}
+
+.nav_info li {
+    display: inline-block;
+    /* float: right; */
+    position: relative;
+}
+
+.nav_info li a{
+    padding: 0 0.75rem;
+    display: block;
+    line-height: 100%;
+    font-size: 0.7rem;
+    color: #333;
+}
+
+
+/* header 끝 */
+
+/* subbar 시작 */
+
+.subbar {
+    position: fixed;
+    height: 30px;
+    width: 100%;
+    top: 85px;
+    background-color: transparent;
+}
+
+/* subbar 끝 */
+
+/* box1 시작 */
+
+.box1 {
+    background-color: rgb(237, 226, 218);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 30%;
+    height: 100%;
+}
+
+/* box1 끝 */

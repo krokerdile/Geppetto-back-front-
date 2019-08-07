@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>제페토</title>
+</head>
+<body>
+    <div class="container">
+        <h1>제목: {{board.title}}</h1>
+        <h2>아이디: {{board.writer}}</h2>
+        <p>날짜: {{board.pub_date}}</p>
+        <p>본문: {{board.body}}</p>
+        <a href="{% url 'post_like' board.id %}">
+            {{message}}
+        </a><br>{{board.like_count}}명이 좋아합니다.
+        <hr>
+        <h3>Comment</h3>
+        {% for comment in board.comment_set.all %}
+            <p>{{comment.body}}</p>
+        {% endfor %}
+        <form action="{% url 'comment_create' board.id %}">
+            <input type="text" name="content" placeholder="댓글을 입력하세요.">
+            <button type="submit">작성</button>
+        </form>
+        <br></br> 
+    
+        <a href="{%url 'board'%}">글 목록</a>
+        <a href="{%url 'edit3' board.id %}">수정</a>
+        <a href="{%url 'delete3' board.id %}">삭제</a>
+    </div>
+</body>
+</html>

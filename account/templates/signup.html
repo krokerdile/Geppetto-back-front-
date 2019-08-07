@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="{% static 'css/signupstyle.css' %}">
+        <title>Sign up</title>
+        <style>
+            @font-face { font-family: 'UhBeemysen'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeemysen.woff') format('woff'); font-weight: normal; font-style: normal; }
+            .container{
+                margin: 0;
+                background-color: wheat;
+                height: 100%;
+                justify-content: stretch;
+                padding:0 0;
+            }
+            .under{
+                background: white;  /* fallback for old browsers */
+                padding-top:80px;
+                display:flex;
+                height: 400px;
+            }
+            .bottom{
+                background-color:white;
+                height: 352px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <div class="out">
+                    <!-- <img src="./캡처2222222222222222222222222222222222222222222.PNG" alt="logo" class="logo"> -->
+                    <p id="main">제페토.</p>
+                    <div class="search__container">
+                        <input class="search__input" type="text" placeholder="Search">
+                    </div>
+                    <nav id="nav">
+                        <ul class="nav_links">
+                            <li><a href="#" id="intro">소개</a></li>
+                            <li><a href="#" id="pick">수거</a></li>
+                            <li><a href="#" id="market">장터</a></li>
+                            <li><a href="#" id="board">게시판</a></li>
+                        </ul>
+                        <ul class="nav_info">
+                            <li><a href="#" id="login">로그인</a></li>
+                            <li><a href="#" id="join">회원가입</a></li>
+                        </ul>
+                    </nav>
+                    <div class="subbar"></div>
+                </div>
+            </header>
+            <div class="under">
+                <div class="main">
+                    <div class="box1"></div>
+                    <div class="signuptitle">
+                        <p class="su">회원가입</p>
+                        <img class="img3" src="LogoFlower3.jpg" width="35" height="40">
+                    </div>
+                    <form method="POST" action="{%url 'signup'%}" class="form1" align="center">
+                        {% csrf_token %}
+                        <!-- <input type="text" name="username"> -->
+                        <input class="mail" type="text" placeholder="아이디" name="username" required>
+                        <!-- <input type="password" name="password1"> -->
+                        <input class="pass1" type="password" placeholder="비밀번호" name="password1" required>
+                        <!-- <input type="password" name="password2"> -->
+                        <input class="pass2" type="password" placeholder="비밀번호 확인" name="password2" required>
+                        <input class="first" type="text" placeholder="이름" required autofocus>
+                        <input class="add" type="text" placeholder="주소" required autofocus>
+                        <input class="tel" type="text" placeholder="전화번호" required autofocus>
+                        <input class="submit" type="submit" value="sign up" align="center">
+                    </form>
+                </div>
+            </div>
+            <div class="bottom">
+            </div>
+        </div>    
+    </body>
+</html>
