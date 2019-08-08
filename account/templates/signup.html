@@ -58,7 +58,7 @@
                     <div class="box1"></div>
                     <div class="signuptitle">
                         <p class="su">회원가입</p>
-                        <img class="img3" src="LogoFlower3.jpg" width="35" height="40">
+                        <img class="img3" src="{% static 'image/LogoFlower3.jpg' %}" width="35" height="40">
                     </div>
                     <form method="POST" action="{%url 'signup'%}" class="form1" align="center">
                         {% csrf_token %}
